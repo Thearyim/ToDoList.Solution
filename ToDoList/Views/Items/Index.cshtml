@@ -7,7 +7,7 @@
   <ul>
     @foreach (var item in Model)
     {
-      <li><a href='/items/@item.GetId()'>@item.GetDescription()</a></li>
+      <li>@item.GetDescription()</li>
     }
   </ul>
 }

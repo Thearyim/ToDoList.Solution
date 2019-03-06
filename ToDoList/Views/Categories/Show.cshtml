@@ -11,13 +11,13 @@
     @foreach (var item in @Model["categoryItems"])
     {
 
-      @if (@item.GetComplete() == 0)
+      @if (@item.GetComplete())
       {
-        <li style="color:red;">@item.GetDescription()</li>
+        <li style="color:red;">@item.GetDescription() (due:@item.GetDueDate())</li>
       }
     else
       {
-      <li style="color:green;">@item.GetDescription()</li>
+        <li style="color:green;">@item.GetDescription() (due:@item.GetDueDate())</li>
       }
 
 
